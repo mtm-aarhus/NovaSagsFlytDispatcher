@@ -64,7 +64,7 @@ def process(orchestrator_connection: OrchestratorConnection, queue_element: Queu
     # Step 2: Call bulk_create_queue_elements
     if data:
         orchestrator_connection.log_info("New activities, creating queue elements")
-        orchestrator_connection.bulk_create_queue_elements("NovaSagsFkyt", references=references, data=data)
+        orchestrator_connection.bulk_create_queue_elements("NovaSagsFlyt", references=references, data=data)
         create_empty_excel("Sagsoverdragelse.xlsx")
         upload_file_to_sharepoint(client, "Delte dokumenter/Sagsoverdragelse", "Sagsoverdragelse.xlsx", orchestrator_connection)
         os.remove("Sagsoverdragelse.xlsx")
