@@ -55,8 +55,8 @@ def process(orchestrator_connection: OrchestratorConnection, queue_element: Queu
     )
 
     references = tuple(
-        f"{str(row['Oprindelig sagsbehandler']).strip()} + "
-        f"{str(row['Ny sagsbehandler']).strip()} -> "
+        f"{str(row['Oprindelig sagsbehandler']).strip()},"
+        f"{str(row['Ny sagsbehandler']).strip()},"
         f"{str(row['Novasagsnummer']).strip()}"
         for _, row in excelfile.iterrows()
     )
