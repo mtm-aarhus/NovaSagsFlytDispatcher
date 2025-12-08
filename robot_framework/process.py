@@ -39,7 +39,7 @@ def process(orchestrator_connection: OrchestratorConnection, queue_element: Queu
     client = sharepoint_client(tenant, client_id, thumbprint, cert_path, SHAREPOINT_SITE_URL, orchestrator_connection)
 
 
-    excel_path = download_file_from_sharepoint(client, "Delte dokumenter/Aktivitetsoverdragelse/Sagsoverdragelse.xlsx")
+    excel_path = download_file_from_sharepoint(client, "Delte dokumenter/Sagsoverdragelse/Sagsoverdragelse.xlsx")
 
     excelfile = pd.read_excel(excel_path, sheet_name="Overdragelser")
 
